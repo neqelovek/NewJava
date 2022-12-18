@@ -28,6 +28,9 @@ public class Les1 {
         array100();
         System.out.println();
 
+        arrayAndCycle();
+        System.out.println();
+
     }
 
     //  Task 1: Написать метод, принимающий на вход два целых числа и проверяющий,
@@ -105,4 +108,17 @@ public class Les1 {
         }
     }
 
+    //    Task 8:Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ]
+    //    пройти по нему циклом, и числа меньшие 6 умножить на 2;
+
+    private static void arrayAndCycle(){
+        int [] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 6){
+                var num = (array[i] * 2);
+                array[i] = num;
+            }
+            System.out.print(array[i] + " ");
+        }
+    }
 }
