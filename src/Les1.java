@@ -22,7 +22,11 @@ public class Les1 {
         leapYear(2022);
         System.out.println();
 
-        arrays();
+        array();
+        System.out.println();
+
+        array100();
+        System.out.println();
 
     }
 
@@ -80,7 +84,7 @@ public class Les1 {
     //    Task 6:Задать целочисленный массив, состоящий из элементов 0 и 1.
     //    Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;
 
-    private static void arrays() {
+    private static void array() {
         int[] array = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 1) {
@@ -89,4 +93,16 @@ public class Les1 {
             System.out.print(array[i] + " ");
         }
     }
+
+    //    Task 7:Задать пустой целочисленный массив длиной 100.
+    //    С помощью цикла заполнить его значениями 1 2 3 4 5 6 7 8 … 100;
+
+    private static void array100(){
+        int[] array = new int[101];
+        for (int i = 1; i < array.length; i++) {
+            array[i] = i;
+            System.out.print(array[i] + " ");
+        }
+    }
+
 }
