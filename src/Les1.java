@@ -16,6 +16,10 @@ public class Les1 {
         System.out.println();
 
         numbersLine();
+        System.out.println();
+
+        leapYear(2016);
+        leapYear(2022);
 
     }
 
@@ -60,5 +64,13 @@ public class Les1 {
         for (int i = 0; i < number; i++) {
             System.out.println(string);
         }
+    }
+
+    //    Task 5:Написать метод, который определяет, является ли год високосным,
+    //    и возвращает boolean (високосный - true, не високосный - false).
+    //    Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
+
+    private static void leapYear(int a){
+        System.out.println(a % 4 == 0 && a % 100 != 0 || a % 400 == 0);
     }
 }
