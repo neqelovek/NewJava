@@ -31,40 +31,43 @@ public class Les1 {
         arrayAndCycle();
         System.out.println();
 
+        arrays();
+        System.out.println();
+
     }
 
     //  Task 1: Написать метод, принимающий на вход два целых числа и проверяющий,
     //  что их сумма лежит в пределах от 10 до 20 (включительно),
     //  если да – вернуть true, в противном случае – false.
-    private static void sumTwoNumbers (int a, int b){
-        System.out.println(10 <= (a+b) && (a+b) <= 20 );
+    private static void sumTwoNumbers(int a, int b) {
+        System.out.println(10 <= (a + b) && (a + b) <= 20);
     }
 
     //    Task 2:Написать метод, которому в качестве параметра передается целое число,
     //    метод должен напечатать в консоль,
     //    положительное ли число передали или отрицательное.
     //    Замечание: ноль считаем положительным числом.
-    private static void rationalNumber(){
+    private static void rationalNumber() {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите рациональное число");
         int num = input.nextInt();
-        if (num >= 0){
+        if (num >= 0) {
             System.out.println("Ваше число " + num + " положительное!");
-        }else
+        } else
             System.out.println("Ваше число " + num + " отрицательное!");
     }
 
     //    Task 3:Написать метод, которому в качестве параметра передается целое число.
     //    Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
 
-    private static void rationalNum(int a){
+    private static void rationalNum(int a) {
         System.out.println(0 >= a);
     }
 
     //    Task 4:Написать метод, которому в качестве аргументов передается строка и число,
     //    метод должен отпечатать в консоль указанную строку, указанное количество раз;
 
-    private static void numbersLine(){
+    private static void numbersLine() {
         Scanner lines = new Scanner(System.in);
         System.out.println("Введите строку ");
         String string = lines.nextLine();
@@ -80,7 +83,7 @@ public class Les1 {
     //    и возвращает boolean (високосный - true, не високосный - false).
     //    Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
 
-    private static void leapYear(int a){
+    private static void leapYear(int a) {
         System.out.println(a % 4 == 0 && a % 100 != 0 || a % 400 == 0);
     }
 
@@ -100,7 +103,7 @@ public class Les1 {
     //    Task 7:Задать пустой целочисленный массив длиной 100.
     //    С помощью цикла заполнить его значениями 1 2 3 4 5 6 7 8 … 100;
 
-    private static void array100(){
+    private static void array100() {
         int[] array = new int[101];
         for (int i = 1; i < array.length; i++) {
             array[i] = i;
@@ -111,14 +114,33 @@ public class Les1 {
     //    Task 8:Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ]
     //    пройти по нему циклом, и числа меньшие 6 умножить на 2;
 
-    private static void arrayAndCycle(){
-        int [] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+    private static void arrayAndCycle() {
+        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < 6){
+            if (array[i] < 6) {
                 var num = (array[i] * 2);
                 array[i] = num;
             }
             System.out.print(array[i] + " ");
+        }
+    }
+
+    //    Task 9:
+    //    (можно только одну из диагоналей, если обе сложно).
+    //    Определить элементы одной из диагоналей можно по следующему принципу:
+    //    индексы таких элементов равны, то есть [0][0], [1][1], [2][2], …, [n][n];
+
+    private static void arrays() {
+        int[][] arrays = new int[5][5];
+        for (int i = 0; i < arrays.length; i++) {
+            arrays[i][i] = 1;
+            arrays[i][arrays.length - i - 1] = 1;
+        }
+        for (int[] array : arrays) {
+            for (int j = 0; j < arrays.length; j++) {
+                System.out.print(array[j] + " ");
+            }
+            System.out.println();
         }
     }
 }
