@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Les1 {
     public static void main(String[] args) {
 
-        sumTwoNumbers(1,2);
-        sumTwoNumbers(11,2);
-        sumTwoNumbers(11,22);
+        sumTwoNumbers(1, 2);
+        sumTwoNumbers(11, 2);
+        sumTwoNumbers(11, 22);
         System.out.println();
 
         rationalNumber();
@@ -32,6 +32,9 @@ public class Les1 {
         System.out.println();
 
         arrays();
+        System.out.println();
+
+        variableArray();
         System.out.println();
 
     }
@@ -148,10 +151,17 @@ public class Les1 {
     //    и возвращающий одномерный массив типа int длиной len,
     //    каждая ячейка которого равна initialValue;
 
-    private static void variableArray(){
+    private static void variableArray() {
         Scanner length = new Scanner(System.in);
         System.out.println("Введите длину массива ");
         int len = length.nextInt();
+        Scanner value = new Scanner(System.in);
+        System.out.println("Инициализируйте ячейки массива ");
+        int initialValue = value.nextInt();
+        int[] array = new int[len];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = initialValue;
+            System.out.print(array[i] + " ");
+        }
     }
-
 }
