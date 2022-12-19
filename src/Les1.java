@@ -37,6 +37,9 @@ public class Les1 {
         variableArray();
         System.out.println();
 
+        arrayMaxMin();
+        System.out.println();
+
     }
 
     //  Task 1: Написать метод, принимающий на вход два целых числа и проверяющий,
@@ -163,5 +166,27 @@ public class Les1 {
             array[i] = initialValue;
             System.out.print(array[i] + " ");
         }
+    }
+
+//    Task 11: Задать одномерный массив и найти в нем минимальный и максимальный элементы;
+
+    private static void arrayMaxMin() {
+        int[] array = {1, 2, 3, -4, -5, 6, 7};
+        int max = 0;
+        int min = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i == 0) {
+                max = array[0];
+                min = array[0];
+            }
+            if (array[i] > max) {
+                max = array[i];
+            }
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        System.out.println("Максимальное значение " + max);
+        System.out.println("Минимальное значение " + min);
     }
 }
