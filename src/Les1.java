@@ -28,7 +28,7 @@ public class Les1 {
         array100();
         System.out.println();
 
-        arrayAndCycle();
+        arrayChange();
         System.out.println();
 
         arrays();
@@ -114,7 +114,7 @@ public class Les1 {
     //    Task 8:Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ]
     //    пройти по нему циклом, и числа меньшие 6 умножить на 2;
 
-    private static void arrayAndCycle() {
+    private static void arrayChange() {
         int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 6) {
@@ -143,4 +143,15 @@ public class Les1 {
             System.out.println();
         }
     }
+
+    //    Task 10: Написать метод, принимающий на вход два аргумента: len и initialValue,
+    //    и возвращающий одномерный массив типа int длиной len,
+    //    каждая ячейка которого равна initialValue;
+
+    private static void variableArray(){
+        Scanner length = new Scanner(System.in);
+        System.out.println("Введите длину массива ");
+        int len = length.nextInt();
+    }
+
 }
