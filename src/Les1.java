@@ -189,4 +189,5 @@ public class Les1 {
         System.out.println("Максимальное значение " + max);
         System.out.println("Минимальное значение " + min);
     }
+
 }
